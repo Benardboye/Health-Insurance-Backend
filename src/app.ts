@@ -6,10 +6,10 @@ import logger from "morgan"
 import connectDB from "./config/db-connect"
 import cors from "cors"
 
-
+let port:string|number = process.env.PORT!
 dotenv.config()
 const app = express()
-const port = process.env.PORT || 5000
+port = port || process.env.PORT || 5000
 
 
 app.use(cors())
