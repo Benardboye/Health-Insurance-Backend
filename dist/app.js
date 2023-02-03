@@ -14,7 +14,7 @@ let port = process.env.PORT;
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 port = port || process.env.PORT || 5000;
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({ origin: "*" }));
 app.use(express_1.default.json());
 app.use((0, morgan_1.default)("dev"));
 (0, db_connect_1.default)();
